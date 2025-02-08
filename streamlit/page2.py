@@ -22,12 +22,14 @@ try:
     st.sidebar.text("NFLDataPy")
 
 
-    flat_team_df_ordered['league_id'] = flat_team_df_ordered['league_id'].astype(str)
+    flat_team_df_ordered['league_id'] = flat_team_df_ordered[
+        'league_id'].astype(str)
     flat_team_df_ordered = flat_team_df_ordered[
         flat_team_df_ordered['league_id'] == selected_league]
 
     nfl_data_2023_df = nfl.import_seasonal_data([2023], 'REG')
-    columns_to_select = ['player_id', 'passing_tds', 'rushing_tds', 'receiving_tds']
+    columns_to_select = [
+        'player_id', 'passing_tds', 'rushing_tds', 'receiving_tds']
     nfl_data_2023_subset_df = nfl_data_2023_df[columns_to_select].copy()
 
     nfl_data_2023_subset_df['total_tds'] = (

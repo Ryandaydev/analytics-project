@@ -4,13 +4,14 @@ import pandas as pd
 
 
 if 'base_url' not in st.session_state:
-    st.session_state['base_url'] = 'https://vigilant-umbrella-pwgwg5qv6639wr-8000.app.github.dev/'
+    st.session_state['base_url'] = 'http://0.0.0.0:8000'
 
 logging.basicConfig(
     filename='football_app.log',  
     level=logging.INFO,  
 )
-st.set_page_config(page_title="Football App", page_icon=":material/sports_football:")
+st.set_page_config(page_title="Football App", 
+                   page_icon=":material/sports_football:")
 
 page_1 = st.Page("page1.py", title="Team Rosters", icon=":material/trophy:")
 

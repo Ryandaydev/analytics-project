@@ -31,8 +31,10 @@ try:
         st.sidebar.subheader(":blue[Data sources]")
         st.sidebar.text("SportsWorldCentral")
         
-        flat_team_df = pd.json_normalize(team_data, 'players', ['team_id', 'team_name','league_id'])
-        column_order = ['league_id','team_id','team_name','position','player_id', 'gsis_id', 'first_name', 'last_name']
+        flat_team_df = pd.json_normalize(
+            team_data, 'players', ['team_id', 'team_name','league_id'])
+        column_order = ['league_id','team_id','team_name','position',
+                        'player_id', 'gsis_id', 'first_name', 'last_name']
         flat_team_df_ordered = flat_team_df[column_order]
 
         if 'flat_team_df_ordered' not in st.session_state:
