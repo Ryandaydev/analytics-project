@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 
 logger = logging.getLogger(__name__) 
 
-st.header("SportWorldCentral Data App")
+st.header("SportsWorldCentral Data App")
 st.subheader("Team Touchdown Totals")
 
 try:

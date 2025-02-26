@@ -5,7 +5,7 @@ import logging
 
 logger = logging.getLogger(__name__) 
 
-st.header("SportWorldCentral Data App")
+st.header("SportsWorldCentral Data App")
 st.subheader("Team Rosters Page")
 
 base_url = st.session_state['base_url']
